@@ -1,34 +1,59 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="bloc">
+        Nom/Prénom
+      </div>
+      <div className="bloc">
+        Genre
+      </div>
+      <div className="bloc">
+        Naissance
+      </div>
+      <div className="bloc">
+        Mort
+      </div>
+      <div className="mosaic">
+        Nom/Prénom
+      </div>
+      <div className="mosaic">
+        Genre
+      </div>
+      <div className="mosaic">
+        Naissance
+      </div>
+      <div className="mosaic">
+        Mort
+      </div>
+
+      <div className="bloc">
+        Pays de décès
+      </div>
+      <div className="bloc">
+        Nationalité
+      </div>
+      <div className="bloc">
+        Récompense
+      </div>
+      <div className="bloc">
+        Domaine
+      </div>
+      <div className="mosaic">
+        Pays de décès
+      </div>
+      <div className="mosaic">
+        Nationalité
+      </div>
+      <div className="mosaic">
+        Récompense
+      </div>
+      <div className="mosaic">
+        Domaine
+      </div>
     </div>
   );
 }
-
-function Square({ text }) {
-  return (
-    <div className="square">
-      {text}
-    </div>
-  );
-}
-
 
 export default App;
