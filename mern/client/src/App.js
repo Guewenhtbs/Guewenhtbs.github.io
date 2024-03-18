@@ -22,4 +22,13 @@ function App() {
   );
 }
 
+function Square({ text }) {
+  return (
+    <div className="square">
+      {text}
+    </div>
+  );
+}
+
+
 export default App;
