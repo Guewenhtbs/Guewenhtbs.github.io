@@ -1,32 +1,45 @@
 /* Styles pour le composant App */
-
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
   margin: 0 auto; /* Centre le contenu horizontalement */
   max-width: 800px; /* Limite la largeur maximale du contenu */
+  max-height: 300px;
 }
 
-table {
-  width: 100%; /* Le tableau occupera 100% de la largeur du conteneur */
+.Tableau {
+  width: fit-content; /* Le tableau occupera la largeur nécessaire */
   border-collapse: collapse;
-  margin-top: 20px;
+  margin: 20px auto; /* Centre le tableau horizontalement */
+  max-height: 300px;
+  overflow-y: auto;
+  display: block; /* Garde la disposition en bloc pour la barre de défilement */
+  text-align: center; /* Centre le contenu horizontalement */
 }
 
-th, td {
+
+.Tableau th, .Tableau td {
   border: 1px solid #dddddd;
-  text-align: center; /* Centre le texte à l'intérieur des cellules */
+  text-align: center;
   padding: 8px;
+  height: 50px;
+  width:100px ;
 }
 
-th {
+.Tableau th {
   background-color: #f2f2f2;
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+.Header {
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
-tr:hover {
+.Tableau tr:nth-child(even) {
+  background-color: #617696;
+}
+
+.Tableau tr:hover {
   background-color: #ddd;
 }

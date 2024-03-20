@@ -3,33 +3,34 @@ import './App.css';
 
 function App() {
   // État pour stocker les données du tableau
+  const [label, setLabel] = useState([
+    "Nom", "Sexe", "Naissance", "Mort", "Nationalité", "Domaine"
+  ]);
+
   const [data, setData] = useState([
-    { id: 1, nom: 'John', age: 25 }
+    ["Jo", "M", 25, 8, "Colombien", "Maths"],
+    ["Jo", "M", 25, 8, "Colombien", "Maths"],
+    ["Jo", "M", 25, 8, "Colombien", "Maths"],
+    ["Jo", "M", 25, 8, "Colombien", "Maths"]
   ]);
 
   return (
     <div className="App">
       <h1>Tableau</h1>
-      <table>
-        <thead>
+      <table className="Tableau">
+        <thead className="Header">
           <tr>
-            <th>Nom</th>
-            <th>Sexe</th>
-            <th>Naissance</th>
-            <th>Mort</th>
-            <th>Nationalité</th>
-            <th>Domaine</th>
-            <th>Formation</th>
-            <th>Récompense</th>
-            <th>Fun facts</th>
+            {label.map((item, index) => (
+              <th key={index}>{item}</th>
+            ))}
           </tr>
         </thead>
         <tbody>
-          {data.map(item => (
-            <tr key={item.id}>
-              <td>{item.nom}</td>
-              <td>{item.age}</td>
-              {/* Ajoutez d'autres colonnes ici */}
+          {data.map((row, rowIndex) => (
+            <tr key={rowIndex}>
+              {row.map((cell, cellIndex) => (
+                <td key={cellIndex}>{cell}</td>
+              ))}
             </tr>
           ))}
         </tbody>
