@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './Historique.css';
 
 function App() {
   // État pour stocker les données du tableau
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Tableau</h1>
+      <h1>Historique</h1>
       <table className="Tableau">
         <thead className="Header">
           <tr>
