@@ -1,0 +1,43 @@
+.App {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  place-items: center;
+}
+
+.bloc {
+  width: 65%;
+  height: 60px;
+  background-color: #b2cac143;
+  border: 2px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(188, 185, 185);
+}
+
+.mosaic {
+  width: 65%;
+  height: 60px; 
+  background-color: #636e6bc3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(188, 185, 185);
+  filter: blur(5px);
+}
+
+.supp_mosaic {
+  width: 65%;
+  height: 60px; 
+  background-color: #636e6bc3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(188, 185, 185);
+}
