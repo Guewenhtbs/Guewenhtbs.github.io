@@ -1,4 +1,4 @@
-const requeteClient = async (code) => {
+export const requeteClient = async (code) => {
     try {
       const response = await fetch('https://fetchurl', {
         method: 'POST',

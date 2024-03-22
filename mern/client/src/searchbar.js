@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './searchbar.css';
+import { requeteClient } from './Requete.js';
 
 function SearchBar() {
   // Données de test
@@ -34,7 +35,7 @@ function SearchBar() {
   
 
   function handleClick(text) {
-    alert(text);
+    requeteClient(text);
     // Remplacer alert par la fonction de requête de personne
     setSearchQuery('');
     setSearchResults([]);
