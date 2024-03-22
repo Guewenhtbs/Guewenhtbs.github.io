@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Historique.css';
 
-function App() {
+function Historique() {
   // État pour stocker les données du tableau
   const [label, setLabel] = useState([
     "Nom", "Sexe", "Naissance", "Mort", "Nationalité", "Domaine"
@@ -15,8 +15,7 @@ function App() {
   ]);
 
   return (
-    <div className="App">
-      <h1>Historique</h1>
+    <div className="Historique">
       <table className="Tableau">
         <thead className="Header">
           <tr>
@@ -39,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default Historique;

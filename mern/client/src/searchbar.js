@@ -36,14 +36,13 @@ function SearchBar() {
 
   function handleClick(text) {
     requeteClient(text);
-    // Remplacer alert par la fonction de requête de personne
     setSearchQuery('');
     setSearchResults([]);
     setlistProf(listProf.filter(item => item!== text));
   }
 
   return (
-    <div>
+    <div text-align="center">
       <input 
         className="bar"
         type="text"
@@ -62,16 +61,5 @@ function SearchBar() {
 
 };
 
-  
 
-  
-const App = () => {
-    return (
-        <div>
-        <h1>Telecomdle</h1>
-        <SearchBar />
-        </div>
-    );
-};
-
-export default App;
+export default SearchBar;

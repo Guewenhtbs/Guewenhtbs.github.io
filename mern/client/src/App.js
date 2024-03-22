@@ -1,5 +1,8 @@
 import './logo.svg';
 import './App.css';
+import SearchBar from './searchbar';
+import Historique from './Historique';
+import BlockInfo from './BlocTexte';
 
 function App() {
   return (
@@ -10,7 +13,8 @@ function App() {
 
       <div className="Box_info">
         <p>CARTE D'IDENTITE</p>
-        <img
+        <BlockInfo />
+        {/* <img
         className="Photo"
         src='logo.svg'
         style={{
@@ -21,9 +25,11 @@ function App() {
 
         <div className="nom_de_la_caractéristique">
           X
-        </div>
+        </div> */}
 
       </div>
+      <SearchBar />
+      <Historique />
     </div>
   );
 }

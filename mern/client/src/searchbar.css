@@ -2,24 +2,25 @@
     width: 150px;
   }
   
-  .results {
-    flex-wrap: wrap;
-    width: 175px;
-    max-height: 150px;
-    overflow: hidden; 
-    overflow-y: scroll;
-  }
-  .result-item {
-    width: 150px;
-    height: 50px;
-    background-color: lightblue;
-    border: 1px solid blue;
-    margin: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
-  }
-  .result-item:hover {
-    background-color: lightgreen;
-  }
+.results {
+  flex-wrap: wrap;
+  width: 175px;
+  max-height: 150px;
+  overflow: hidden; 
+  overflow-y: scroll;
+  text-align: center;
+}
+.result-item {
+  width: 150px;
+  height: 50px;
+  background-color: lightblue;
+  border: 1px solid blue;
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+.result-item:hover {
+  background-color: lightgreen;
+}
