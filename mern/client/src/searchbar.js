@@ -4,12 +4,14 @@ import './searchbar.css';
 function SearchBar() {
   // Données de test
   const [listProf, setlistProf] = useState([
-    'Stéphane Frenot',
-    'Pierre Francois',
-    'Oana Iova',
-    'Victor Rebecq',
-    'Chantal Muller',
-    'Claire Goursaud',
+    "Albert",
+    "Pierre",
+    "Remi",
+    "Lise",
+    "Adam",
+    "Emma",
+    "Ines",
+    "Titouan"
   ]);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -65,7 +67,7 @@ function SearchBar() {
 const App = () => {
     return (
         <div>
-        <h1>Trouve ton prof préféré</h1>
+        <h1>Telecomdle</h1>
         <SearchBar />
         </div>
     );
