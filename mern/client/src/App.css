@@ -1,14 +1,20 @@
 .App {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 50px;
-  justify-items: center;
+  grid-gap: 10px;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  place-items: center;
 }
 
 .bloc {
-  width: 60%;
-  height: 70px;
+  width: 65%;
+  height: 60px;
   background-color: #b2cac143;
+  border: 1px solid #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,13 +22,24 @@
 }
 
 .mosaic {
-  width: 60%;
-  height: 70px; 
-  border: 1px solid #ccc;
-  background-color: #63ddbfc3;
+  width: 65%;
+  height: 60px; 
+  background-color: #636e6bc3;
+  border: 1px solid #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
-  filter: blur(3px);
+  filter: blur(5px);
+}
+
+.supp_mosaic {
+  width: 60%;
+  height: 70px; 
+  background-color: #636e6bc3;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
 }
