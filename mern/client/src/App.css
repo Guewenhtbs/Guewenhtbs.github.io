@@ -1,0 +1,52 @@
+/* App.css */
+
+/* Style de base pour le corps de l'application */
+.App {
+  text-align: center; /* Alignement du contenu au centre */
+  background-color:#a8aaabfe;
+}
+
+/* Styles pour l'en-tête */
+.App-header {
+  background-color: #054475fe; /* Couleur de fond de l'en-tête */
+  padding: 20px; /* Espacement autour du contenu de l'en-tête */
+  color: white; /* Couleur du texte de l'en-tête */
+}
+
+/* Styles pour le texte "Télécomdle" dans l'en-tête */
+.App-header h1 {
+  margin: 0; /* Supprime les marges par défaut */
+  font-family: Arial, sans-serif; /* Police de caractères */
+  font-size: 36px; /* Taille de la police */
+}
+
+/* Styles pour l'encart */
+.Box_info {
+  font-family: 'Italico';
+  font-size: 20;
+  letter-spacing: 10px;
+  width: 1000px; /* Largeur de l'encart */
+  height: 400px; /* Hauteur de l'encart */
+  background-color: #abcdef; /* Couleur de fond de l'encart */
+  margin: 20px auto; /* Marge autour de l'encart */
+  border-radius: 10px; /* Bords arrondis */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+}
+
+
+
+.Photo {
+  position: relative;
+  right: 35%;
+  top: 5%;
+}
+
+.nom_de_la_caractéristique {
+  position: relative;
+  bottom: 40%;   /* modifier les valeurs de positions relative pour chaque éléments de la boite d'info */
+  left: 30%;
+  right: 10%;
+  background-color: aquamarine;
+  width: 100px; /* Largeur de l'encart */
+  height: 40px; /* Hauteur de l'encart */
+}
