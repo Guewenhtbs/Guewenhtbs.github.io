@@ -1,11 +1,13 @@
-export const requeteClient = async (code) => {
+import 'whatwg-fetch';
+
+export const requeteClient = async (message) => {
     try {
-      const response = await fetch('https://fetchurl', {
+      const response = await fetch(`/api/trigger`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'text/plain'
+          'Content-Type': 'application/json'
         },
-        body: code
+        body: JSON.stringify({ trigger: message })
       });
 
       if (!response.ok) {
