@@ -40,6 +40,7 @@ function App() {
         <p>CARTE D'IDENTITE</p>
         <div className="infocontainer">
           <div className="line">
+            <div class="photo_container"><img src="https://kinsta.com/fr/wp-content/uploads/sites/4/2020/09/jpeg.jpg" alt="tiggr"></img></div>
             <div className="bloc">Nom/Prénom</div>
             <div className="bloc">Genre</div>
             <div className="bloc">Siècle</div>

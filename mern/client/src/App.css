@@ -95,3 +95,16 @@
   color : rgb(0,0,0);
   word-wrap: break-word;
 }
+
+.photo_container {
+  width: 170px; /* largeur fixe du conteneur */
+  height: 200px; /* hauteur fixe du conteneur */
+  overflow: hidden; /* cache le débordement de l'image */
+  border-radius: 10px;
+}
+
+.photo_container img {
+  width: 100%; /* assure que l'image occupe toute la largeur du conteneur */
+  height: 100%; /* assure que l'image occupe toute la hauteur du conteneur */
+  object-fit: cover; /* ajuste la taille de l'image pour couvrir tout le conteneur */
+}
