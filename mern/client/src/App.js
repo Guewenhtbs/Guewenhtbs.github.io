@@ -21,21 +21,6 @@ function App() {
   })
 
   function Set_bloc(text){
-    if (text.includes('/')) {
-      let element = text.split('/');
-      if (element[1]) {
-        return <div>
-          <div className='supp_mosaic2'>{element[0]}</div>
-          <div className='supp_mosaic'>{element[1]}</div>
-        </div>
-      }
-      else {
-        return <div>
-          <div className='supp_mosaic2'>{element[0]}</div>
-          <div className='mosaic2'>ᒲᔑ╎リᓵ⍑ᔑ∷ᔑᓵℸ</div>
-        </div>
-      }
-    }
     if (text){
       if (text.includes('/')) {
         let element = text.split('/');
