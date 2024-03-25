@@ -1,31 +1,36 @@
-function BoutonAbandon(abandon) {
+import { requeteClient } from './Requete.js';
+
+
+function BoutonAbandon() {
+  const handleClick = () => {
+    requeteClient("abandon");
+  };
     return (
-      <button onClick={abandon}>
+      <button onClick={handleClick}>
         Langue au chat?
       </button>
     );
   };
   
 
-function BoutonNewGame(newGame) {
+function BoutonNewGame() {
+  const handleClick = () => {
+    requeteClient("newgame");
+  };
     return (
-      <button onClick={newGame}>
+      <button onClick={handleClick}>
         Nouvelle partie
       </button>
     );
   };
 
 export default function App() {
-function abandon(){       
-};
-function newGame(){
-};
 
 return (
     <div>
     <h1>ouaaaaaais</h1>
-    <BoutonNewGame newGame={newGame}/>
-    <BoutonAbandon abandon={abandon} />
+    <BoutonNewGame />
+    <BoutonAbandon />
     </div>
 );
 };  
