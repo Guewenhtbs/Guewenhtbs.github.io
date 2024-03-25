@@ -50,3 +50,48 @@
   width: 100px; /* Largeur de l'encart */
   height: 40px; /* Hauteur de l'encart */
 }
+
+.infocontainer {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.line {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  place-items: center;
+}
+
+.bloc {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  letter-spacing : -0.5px;
+  color: rgb(0, 0, 0);
+}
+
+.mosaic {
+  width: 120px;
+  height: 60px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0,0,0);
+  filter: blur(5px);
+}
+
+.supp_mosaic {
+  width: 120px;
+  height: 60px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  letter-spacing : -0.5px;
+  color : rgb(0,0,0);
+  word-wrap: break-word;
+}

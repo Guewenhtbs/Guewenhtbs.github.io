@@ -11,33 +11,34 @@
 }
 
 .bloc {
-  width: 65%;
+  width: 120px;
   height: 60px;
-  background-color: #b2cac143;
-  border: 2px solid #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(188, 185, 185);
+  font-size: medium;
+  letter-spacing : -0.5px;
+  color: rgb(0, 0, 0);
 }
 
 .mosaic {
-  width: 65%;
+  width: 120px;
   height: 60px; 
-  background-color: #636e6bc3;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(188, 185, 185);
+  color: rgb(0,0,0);
   filter: blur(5px);
 }
 
 .supp_mosaic {
-  width: 65%;
+  width: 120px;
   height: 60px; 
-  background-color: #636e6bc3;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(188, 185, 185);
+  font-size: medium;
+  letter-spacing : -0.5px;
+  color : rgb(0,0,0);
+  word-wrap: break-word;
 }
