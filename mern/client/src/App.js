@@ -8,14 +8,14 @@ import Historique from './Historique';
 function App() {
 
   const [info_person, setinfo_person] = useState({
-    "Nom" : "Albert",
+    "Nom" : false,
     "Genre" : "M",
     "Siècle" : "20",
     "MBTI" : "INTP",
-    "Animal" : "Chat",
+    "Animal" : false,
     "Formation" : "Polytechnique",
-    "Récompense" : "Prix Nobel",
-    "Nationalité" : "Allemande/Amércaine",
+    "Récompense" : false,
+    "Nationalité" : "Allemande/",
     "Domaine" : "Physique"
 
   })
