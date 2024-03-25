@@ -31,6 +31,7 @@
   margin: 20px auto; /* Marge autour de l'encart */
   border-radius: 10px; /* Bords arrondis */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+  display:flex;
 }
 
 
@@ -54,6 +55,21 @@
 .infocontainer {
   display: grid;
   grid-gap: 10px;
+  float: left;
+}
+
+.photocontainer {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo {
+  width: 35px; 
+  height: 45px; 
+  background-color: #3498db; 
+  border: 2px solid #2980b9;
 }
 
 .line {

@@ -35,9 +35,13 @@ function App() {
       <div className="App-header">
         <h1>Télécomdle</h1>
       </div>
-
       <div className="Box_info">
-        <p>CARTE D'IDENTITE</p>
+
+        <div className="photocontainer">
+          <div className="photo">
+
+          </div>
+        </div>
         <div className="infocontainer">
           <div className="line">
             <div className="bloc">Nom/Prénom</div>
