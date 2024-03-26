@@ -60,7 +60,7 @@ function SearchBar() {
         onChange={(e) => handleSearch(e.target.value)}
     />
     
-    <div className="results">
+    <div className='results'>
         {searchResults.map((result, index) => (
             <button key={index} className='result-item' onClick={() => handleClick(result)}>{result}</button>
         ))}

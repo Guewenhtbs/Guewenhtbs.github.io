@@ -28,17 +28,14 @@
   top: calc(100% + 5px); /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
-  max-height: 150px;
-  overflow:hidden;
+  max-height: 200px;
+  overflow: hidden;
   overflow-y: scroll;
   text-align: center;
-  flex-wrap: nowrap;
   width: 300px;
   backdrop-filter: blur(5px); /* Apply blur effect to the background */
   background-color: rgba(255, 255, 255, 0.2); /* Set a semi-transparent background color */
-  border-radius: 10px; /* Set desired border radius */
-  display: flex; /* Add display flex */
-  flex-direction: column; /* Set flex-direction to column */
+  border-radius: 10px; /* Set desired border radius  */
   justify-content: center; /* Center items vertically */
   align-items: center; /* Center items horizontally */
 }
@@ -48,14 +45,15 @@
 .result-item {
   width: 300px;
   background-color: rgba(255, 255, 255, 0.0);
-  height: 50px !important;
+  min-height: 40px;
+  max-height: 40px;
   border: none;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s;
 }
 
 .result-item:hover {
-  background-color: rgba(144, 238, 144,0.6);
+  background-color: rgba(255, 255, 255, 0.6);
 }

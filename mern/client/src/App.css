@@ -31,7 +31,8 @@
   margin: 20px auto; /* Marge autour de l'encart */
   border-radius: 10px; /* Bords arrondis */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
-  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -63,36 +64,35 @@
 .funfact_container{
   height:100px;
   width:900px;
-  display: block;
+  display: flex;
   float:bottom;
-}
-
-.funfact_title{
-  height:20px;
-  text-align:left !important;
-  display: block;
+  justify-content: center;
+  align-items: center;
 }
 
 .funfact_mosaic {
-  width: 900px;
+  width: 850px;
   height: 80px; 
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(0,0,0);
   filter: blur(5px);
+  user-select: none;
+  margin-bottom: 15px;
 }
 
 .funfact_supp_mosaic {
-  width: 900;
+  width: 850;
   height: 80px; 
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
   font-size: medium;
   letter-spacing : -0.5px;
   color : rgb(0,0,0);
   word-wrap: break-word;
+  margin-bottom: 15px;
 }
 
 .name_photo_container {

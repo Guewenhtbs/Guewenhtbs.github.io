@@ -9,7 +9,7 @@ function App() {
 
   const [info_person, setinfo_person] = useState({
     "Nom" : false,
-    "Photo":false,
+    "Photo": false,
     "Genre" : "M",
     "Siècle" : "20",
     "MBTI" : "INTP",
@@ -46,7 +46,7 @@ function App() {
       return <div className='funfact_supp_mosaic'>{text}</div>
     }
     else {
-      return <div className='funfact_mosaic'>ᒲᔑ╎リᓵ⍑ᔑ∷</div>
+      return <div className='funfact_mosaic'>⍑ᒷꖎꖎ𝙹ᒲ||リᔑᒲᒷ╎ᓭ∴╎リ↸∴⍑ᒷᒷꖎᔑリ↸i∴ᔑリℸℸ𝙹ᓭℸ𝙹!¡ꖎ╎ᓭℸᒷリℸ𝙹||𝙹⚍ᒲ||リᔑᒲᒷ╎ᓭ∴╎リ↸∴⍑ᒷᒷᔑリℸℸ𝙹ᓭℸ𝙹!¡ꖎ╎ᓭℸᒷリ∴⍑ᒷᒷꖎᔑリ↸i∴ᔑリℸℸ𝙹ᓭℸ𝙹!¡ꖎ╎ᓭℸᒷリℸ𝙹||𝙹⚍∴╎</div>
     }
   }
 
@@ -56,47 +56,46 @@ function App() {
         <h1>Télécomdle</h1>
       </div>
       <div className="Box_info">
-      <div className="name_photo_container">
-      {Set_image(info_person["Photo"])}
-      <div className="bloc">Nom/Prénom</div>
-      {Set_bloc(info_person["Nom"])}
-      </div>
-        <div className="infocontainer">
-          <div className="line">
-            <div className="bloc">Genre</div>
-            <div className="bloc">Siècle</div>
-            <div className="bloc">MBTI</div>
-            <div className="bloc">Animal de compagnie</div>
+        <div display='flex'>
+          <div className="name_photo_container">
+            {Set_image(info_person["Photo"])}
+            <div className="bloc">Nom/Prénom</div>
+            {Set_bloc(info_person["Nom"])}
           </div>
+          <div className="infocontainer">
+            <div className="line">
+              <div className="bloc">Genre</div>
+              <div className="bloc">Siècle</div>
+              <div className="bloc">MBTI</div>
+              <div className="bloc">Animal de compagnie</div>
+            </div>
 
-          <div className="line"> 
-            {Set_bloc(info_person["Genre"])}
-            {Set_bloc(info_person["Siècle"])}
-            {Set_bloc(info_person["MBTI"])}
-            {Set_bloc(info_person["Animal"])}
-          </div>
+            <div className="line"> 
+              {Set_bloc(info_person["Genre"])}
+              {Set_bloc(info_person["Siècle"])}
+              {Set_bloc(info_person["MBTI"])}
+              {Set_bloc(info_person["Animal"])}
+            </div>
 
-          <div className="line">
-            <div className="bloc">Formation</div>
-            <div className="bloc">1ere Nationalité</div>
-            <div className="bloc">2eme Nationalité</div>
-            <div className="bloc">Récompense</div>
-            <div className="bloc">Domaine</div>
-          </div>
+            <div className="line">
+              <div className="bloc">Formation</div>
+              <div className="bloc">1ere Nationalité</div>
+              <div className="bloc">2eme Nationalité</div>
+              <div className="bloc">Récompense</div>
+              <div className="bloc">Domaine</div>
+            </div>
 
-          <div className="line">
-          {Set_bloc(info_person["Formation"])}
-          {Set_bloc(info_person["Nationalité1"])}
-          {Set_bloc(info_person["Nationalité2"])}
-          {Set_bloc(info_person["Récompense"])}
-          {Set_bloc(info_person["Domaine"])}
+            <div className="line">
+            {Set_bloc(info_person["Formation"])}
+            {Set_bloc(info_person["Nationalité1"])}
+            {Set_bloc(info_person["Nationalité2"])}
+            {Set_bloc(info_person["Récompense"])}
+            {Set_bloc(info_person["Domaine"])}
+            </div>
           </div>
-          
-        <div className="funfact_container">
-        <div className="funfact_title">Funfact</div>
-        {Set_funfact(info_person["Funfact"])}
-        
         </div>
+        <div className="funfact_container">
+          {Set_funfact(info_person["Funfact"])}
         </div>
       </div>
 
