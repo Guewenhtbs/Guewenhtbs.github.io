@@ -25,8 +25,8 @@
   font-family: 'Italico';
   font-size: 20;
   letter-spacing: 10px;
-  width: 1000px; /* Largeur de l'encart */
-  height: 400px; /* Hauteur de l'encart */
+  width: 900px; /* Largeur de l'encart */
+  height: 500px; /* Hauteur de l'encart */
   background-color: #abcdef; /* Couleur de fond de l'encart */
   margin: 20px auto; /* Marge autour de l'encart */
   border-radius: 10px; /* Bords arrondis */
@@ -49,27 +49,62 @@
   right: 10%;
   background-color: aquamarine;
   width: 100px; /* Largeur de l'encart */
-  height: 40px; /* Hauteur de l'encart */
+  height: 40px;
 }
 
 .infocontainer {
   display: grid;
   grid-gap: 10px;
   float: left;
+  height:400px;
+  width:670;
 }
 
-.photocontainer {
+.funfact_container{
+  height:100px;
+  width:900px;
+  display: block;
+  float:bottom;
+}
+
+.funfact_title{
+  height:20px;
+  text-align:left !important;
+  display: block;
+}
+
+.funfact_mosaic {
+  width: 900px;
+  height: 80px; 
+  display: block;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0,0,0);
+  filter: blur(5px);
+}
+
+.funfact_supp_mosaic {
+  width: 900;
+  height: 80px; 
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  letter-spacing : -0.5px;
+  color : rgb(0,0,0);
+  word-wrap: break-word;
+}
+
+.name_photo_container {
   float: left;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.photo {
-  width: 35px; 
-  height: 45px; 
-  background-color: #3498db; 
-  border: 2px solid #2980b9;
+  height:400px;
+  width:170px;
+  flex-direction: column;
+  margin-left :30px;
+  margin-right :30px;
 }
 
 .line {

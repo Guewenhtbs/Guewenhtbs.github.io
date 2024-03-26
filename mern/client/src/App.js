@@ -9,6 +9,7 @@ function App() {
 
   const [info_person, setinfo_person] = useState({
     "Nom" : false,
+    "Photo":false,
     "Genre" : "M",
     "Siècle" : "20",
     "MBTI" : "INTP",
@@ -17,7 +18,8 @@ function App() {
     "Récompense" : "Prix Nobel",
     "Nationalité1" : "Allemande",
     "Nationalité2" : "Américaine",
-    "Domaine" : "Physique"
+    "Domaine" : "Physique",
+    "Funfact" : false
 
   })
 
@@ -30,22 +32,37 @@ function App() {
     }
   }
 
+  function Set_image(text){
+    if (text){
+      return <div className="photo_container"><img src={text} alt="photo du génie"></img></div>
+    }
+    else {
+      return <div className="photo_container"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/No_avatar.png" alt="mais qui est-ce??"></img></div>
+    }
+  }
+
+  function Set_funfact(text){
+    if (text){
+      return <div className='funfact_supp_mosaic'>{text}</div>
+    }
+    else {
+      return <div className='funfact_mosaic'>ᒲᔑ╎リᓵ⍑ᔑ∷</div>
+    }
+  }
+
   return (
     <div className="App">
       <div className="App-header">
         <h1>Télécomdle</h1>
       </div>
       <div className="Box_info">
-
-        <div className="photocontainer">
-          <div className="photo">
-
-          </div>
-        </div>
+      <div className="name_photo_container">
+      {Set_image(info_person["Photo"])}
+      <div className="bloc">Nom/Prénom</div>
+      {Set_bloc(info_person["Nom"])}
+      </div>
         <div className="infocontainer">
           <div className="line">
-            <div class="photo_container"><img src="https://kinsta.com/fr/wp-content/uploads/sites/4/2020/09/jpeg.jpg" alt="tiggr"></img></div>
-            <div className="bloc">Nom/Prénom</div>
             <div className="bloc">Genre</div>
             <div className="bloc">Siècle</div>
             <div className="bloc">MBTI</div>
@@ -53,7 +70,6 @@ function App() {
           </div>
 
           <div className="line"> 
-            {Set_bloc(info_person["Nom"])}
             {Set_bloc(info_person["Genre"])}
             {Set_bloc(info_person["Siècle"])}
             {Set_bloc(info_person["MBTI"])}
@@ -75,21 +91,15 @@ function App() {
           {Set_bloc(info_person["Récompense"])}
           {Set_bloc(info_person["Domaine"])}
           </div>
+          
+        <div className="funfact_container">
+        <div className="funfact_title">Funfact</div>
+        {Set_funfact(info_person["Funfact"])}
+        
         </div>
-        {/* <img
-        className="Photo"
-        src='logo.svg'
-        style={{
-          width: 200,
-          height: 200
-        }}
-        ></img>
-
-        <div className="nom_de_la_caractéristique">
-          X
-        </div> */}
-
+        </div>
       </div>
+
       <SearchBar />
       <Historique />
     </div>
