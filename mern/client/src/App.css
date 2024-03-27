@@ -10,7 +10,22 @@
 /* Style de base pour le corps de l'application */
 .App {
   text-align: center; 
- 
+}
+
+/* Style pour le bouton ABOUT US*/
+.App-header::before {
+  content: "⭐"; /* Utilisation du signe plus comme contenu */
+  position: absolute; /* Position absolue par rapport à l'élément parent */
+  top: 21px; /* Ajustement de la position verticale */
+  left: 20px; /* Ajustement de la position horizontale */
+  width: 40px; /* Largeur du carré */
+  height: 40px; /* Hauteur du carré */
+  background-color: rgb(255, 255, 255); /* Couleur de fond du carré */
+  font-size: 30px; /* Taille de la police du signe plus */
+  display: flex; /* Utilisation de flexbox pour centrer le signe plus */
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+  border-radius: 5px; /* Bords arrondis */
 }
 
 /* Styles pour l'en-tête */
@@ -202,5 +217,3 @@
 .coolbutton:focus {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
 }
-
-

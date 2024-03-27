@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './logo.svg';
 import './App.css';
 import SearchBar from './searchbar';
 import Historique from './Historique';
