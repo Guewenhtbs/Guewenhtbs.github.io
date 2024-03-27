@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Historique.css';
+import 'whatwg-fetch';
 
 function Historique() {
   // État pour stocker les données du tableau
@@ -13,7 +14,7 @@ function Historique() {
     // Fonction pour récupérer les données depuis l'API
     const fetchData = async () => {
       try {
-        const response = await fetch('/historique');
+        const response = await fetch('/api/historique');
         if (!response.ok) {
           throw new Error('Erreur réseau');
         }
