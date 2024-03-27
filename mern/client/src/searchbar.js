@@ -5,10 +5,10 @@ import { requeteClient } from './Requete.js';
 function SearchBar() {
   // Données de test
   const [listProf, setlistProf] = useState([
-    "Albert",
-    "Pierre",
+    "Albert Einstein",
+    "Pierre", 
     "Remi",
-    "Lise",
+    "Lise Meitner",
     "Adam",
     "Emma",
     "Ines",
