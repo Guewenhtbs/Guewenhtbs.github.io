@@ -20,7 +20,7 @@
 
 
 .Tableau th, .Tableau td {
-  border: 1px solid #dddddd;
+  border: 1px solid #eaeaeacd;
   text-align: center;
   padding: 8px;
   height: 50px;
@@ -46,5 +46,5 @@
 }
 
 .Tableau tr:hover {
-  background-color: #cbd3cade;
+  background-color: #cbdbc8de;
 }
