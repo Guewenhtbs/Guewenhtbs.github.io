@@ -122,6 +122,7 @@ function App() {
       </div>
       <Historique />
     </div>
+  </div>
   );
 }
 
