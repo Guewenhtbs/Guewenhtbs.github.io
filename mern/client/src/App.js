@@ -13,23 +13,41 @@ function App() {
     "Genre" : "M",
     "Siècle" : "20",
     "MBTI" : "INTP",
-    "Animal" : "Chat",
+    "Animal" : false,
     "Formation" : "Polytechnique",
-    "Récompense" : "Prix Nobel",
-    "Nationalité1" : "Allemande",
-    "Nationalité2" : "Américaine",
-    "Domaine" : "Physique",
-    "Funfact" : false
+    "Récompense" : false,
+    "Nationalité" : "Allemande/",
+    "Domaine" : "Physique"
+
 
   })
 
   function Set_bloc(text){
     if (text){
-      return <div className='supp_mosaic'>{text}</div>
+      if (text.includes('/')) {
+        let element = text.split('/');
+        if (element[1]) {
+          return <div>
+            <div className='supp_mosaic'>{element[0]}</div>
+            <div className='supp_mosaic'>{element[1]}</div>
+          </div>
+        }
+        else {
+          return <div>
+            <div className='supp_mosaic'>{element[0]}</div>
+            <div className='mosaic'>ᒲᔑ╎リᓵ⍑ᔑ∷ᔑᓵℸ</div>
+          </div>
+        }
+      }
+      else {
+        return <div className='supp_mosaic'>{text}</div>
+      }
+      
     }
     else {
       return <div className='mosaic'>ᒲᔑ╎リᓵ⍑ᔑ∷ᔑᓵℸ</div>
     }
+    
   }
 
   function Set_image(text){
@@ -69,7 +87,7 @@ function App() {
               <div className="bloc">MBTI</div>
               <div className="bloc">Animal de compagnie</div>
             </div>
-
+    
             <div className="line"> 
               {Set_bloc(info_person["Genre"])}
               {Set_bloc(info_person["Siècle"])}
@@ -79,20 +97,17 @@ function App() {
 
             <div className="line">
               <div className="bloc">Formation</div>
-              <div className="bloc">1ere Nationalité</div>
-              <div className="bloc">2eme Nationalité</div>
+              <div className="bloc">Nationalité</div>
               <div className="bloc">Récompense</div>
               <div className="bloc">Domaine</div>
             </div>
 
             <div className="line">
-            {Set_bloc(info_person["Formation"])}
-            {Set_bloc(info_person["Nationalité1"])}
-            {Set_bloc(info_person["Nationalité2"])}
-            {Set_bloc(info_person["Récompense"])}
-            {Set_bloc(info_person["Domaine"])}
+              {Set_bloc(info_person["Formation"])}
+              {Set_bloc(info_person["Nationalité"])}
+              {Set_bloc(info_person["Récompense"])}
+              {Set_bloc(info_person["Domaine"])}
             </div>
-          </div>
         </div>
         <div className="funfact_container">
           {Set_funfact(info_person["Funfact"])}
