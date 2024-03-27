@@ -12,7 +12,15 @@ function SearchBar() {
     "Adam",
     "Emma",
     "Ines",
-    "Titouan"
+    "Titouan",
+    "a",
+    "a",
+    "a",
+    "a",
+    "a",
+    "a",
+    "a",
+    "a"
   ]);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
@@ -42,21 +50,22 @@ function SearchBar() {
   }
 
   return (
-    <div text-align="center">
-      <input 
+
+    <div className="container">
+    <input 
         className="bar"
         type="text"
         placeholder="Rechercher..."
         value={searchQuery}
         onChange={(e) => handleSearch(e.target.value)}
-      />
-      
-      <div className="results">
+    />
+    
+    <div className='results'>
         {searchResults.map((result, index) => (
-        <button key={index} className='result-item' onClick={() => handleClick(result)}>{result}</button>
+            <button key={index} className='result-item' onClick={() => handleClick(result)}>{result}</button>
         ))}
-      </div>
     </div>
+</div>
   );
 
 };
