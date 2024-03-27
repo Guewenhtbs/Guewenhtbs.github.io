@@ -3,6 +3,7 @@ import './logo.svg';
 import './App.css';
 import SearchBar from './searchbar';
 import Historique from './Historique';
+import Pubpopup from './Popup';
 import { requeteClient } from './Requete';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 
 
   })
+  const [pub_open,setpub_open] = useState(true)
 
   function Set_bloc(text){
     if (text){
@@ -122,6 +124,7 @@ function App() {
       </div>
       <Historique />
     </div>
+    {Pubpopup('https://media.gqmagazine.fr/photos/5cdade1acbf34364716160e4/16:9/w_1280,c_limit/shaveballs.jpg',pub_open,setpub_open)}
   </div>
   );
 }
