@@ -23,6 +23,10 @@ function App() {
 
   })
   const [pub_open,setpub_open] = useState(true)
+  const [pub_info,setpub_info] = useState({
+    "Image" : 'https://media.gqmagazine.fr/photos/5cdade1acbf34364716160e4/16:9/w_1280,c_limit/shaveballs.jpg',
+    "Link" : 'https://media.gqmagazine.fr/photos/5cdade1acbf34364716160e4/16:9/w_1280,c_limit/shaveballs.jpg'
+  })
 
   function Set_bloc(text){
     if (text){
@@ -124,7 +128,7 @@ function App() {
       </div>
       <Historique />
     </div>
-    {Pubpopup('https://media.gqmagazine.fr/photos/5cdade1acbf34364716160e4/16:9/w_1280,c_limit/shaveballs.jpg',pub_open,setpub_open)}
+    {Pubpopup(pub_info,pub_open,setpub_open)}
   </div>
   );
 }

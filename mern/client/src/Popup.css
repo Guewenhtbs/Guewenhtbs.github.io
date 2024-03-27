@@ -14,6 +14,7 @@
 }
 
 .modal > .pub_container {
+    position: relative; /* Ajoutez cette ligne pour permettre un positionnement relatif */
     width: 500px; /* largeur fixe du conteneur */
     height: 300px; /* hauteur fixe du conteneur */
     overflow: hidden; /* cache le débordement de l'image */
@@ -21,23 +22,23 @@
 }
 
 .modal > .pub_container img {
-    position: relative; /* Position relative pour permettre le positionnement absolu du bouton */
     width: 100%; /* assure que l'image occupe toute la largeur du conteneur */
     height: 100%; /* assure que l'image occupe toute la hauteur du conteneur */
     object-fit: cover; /* ajuste la taille de l'image pour couvrir tout le conteneur */
 }
 
-.modal > .pub_container > .close {
-cursor: pointer;
-position: absolute;
-display: block;
-padding: 2px 5px;
-line-height: 20px;
-right: 30%;
-top: 30%;
-font-size: 24px;
-background: #ffffff;
-border-radius: 18px;
-border: 1px solid #cfcece;
-z-index: 1; /* Assure que le bouton de fermeture est au-dessus de l'image */
+.modal > .pub_container .close {
+    position: absolute; /* Position absolue par rapport au conteneur de l'image */
+    top: 5px; /* Décalage de 10px par rapport au haut */
+    right: 5px; /* Décalage de 10px par rapport à la droite */
+    cursor: pointer;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #cfcece;
+    color: black;
+    z-index: 1; /* Assure que le bouton de fermeture est au-dessus de l'image */
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
 }
