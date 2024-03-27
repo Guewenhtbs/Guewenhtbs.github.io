@@ -28,7 +28,7 @@
 }
 
 .Tableau th {
-  background-color: #f2f2f2;
+  background-color: #ffffffd5;
 }
 
 .Header {
@@ -38,13 +38,13 @@
 }
 
 .Tableau tr:nth-child(even) {
-  background-color: #7690b6e2;
+  background-color: #7f96b9f0;
 }
 
 .Tableau tr:nth-child(odd) {
-  background-color: #90b588e1;
+  background-color: #9f96b9ea;
 }
 
 .Tableau tr:hover {
-  background-color: #dddddd;
+  background-color: #cbd3cade;
 }
