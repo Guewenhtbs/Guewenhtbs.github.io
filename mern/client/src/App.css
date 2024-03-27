@@ -159,3 +159,28 @@
   height: 100%; /* assure que l'image occupe toute la hauteur du conteneur */
   object-fit: cover; /* ajuste la taille de l'image pour couvrir tout le conteneur */
 }
+
+
+
+/* ---------- BOUTONS ---------- */
+.coolbutton {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  border-radius: 10px; /* Rounder button */
+  padding: 8px;
+  margin: 0 5px; /* Add margin to separate buttons */
+  transition: box-shadow 0.3s; /* Smooth transition for focus */
+}
+
+/* CSS for buttons on hover */
+.coolbutton:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+  cursor: pointer;
+}
+
+/* CSS for buttons on focus */
+.coolbutton:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add shadow on focus */
+}

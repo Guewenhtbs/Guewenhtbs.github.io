@@ -3,7 +3,7 @@ import './logo.svg';
 import './App.css';
 import SearchBar from './searchbar';
 import Historique from './Historique';
-
+import { requeteClient } from './Requete';
 
 function App() {
 
@@ -99,7 +99,12 @@ function App() {
         </div>
       </div>
 
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
+      <coolbutton onClick={() => {requeteClient("newgame");}}>Nouvelle partie</coolbutton>
+
       <SearchBar />
+      <coolbutton onClick={() => {requeteClient("abandon");}}>Langue au chat</coolbutton>
+      </div>
       <Historique />
     </div>
   );
