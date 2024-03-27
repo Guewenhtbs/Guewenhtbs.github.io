@@ -3,7 +3,8 @@
 /* Style de base pour le corps de l'application */
 .App {
   text-align: center; /* Alignement du contenu au centre */
-  background-color:#a8aaabfe;
+  background-image:url("fond.png");
+  overflow: hidden;
 }
 
 /* Styles pour l'en-tête */
