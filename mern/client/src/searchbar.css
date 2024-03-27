@@ -8,7 +8,7 @@
   width: 300px;
   border: none;
   outline: none;
-  background: transparent;
+  background: rgba(183, 196, 198, 0.312);
   font-size: 16px;
   border-radius: 10px; /* Rounder input */
   padding: 8px;
@@ -16,11 +16,11 @@
 }
 
 .bar::placeholder {
-  color: #999; /* Placeholder color */
+  color: #e5e5e5; /* Placeholder color */
 }
 
 .bar:focus {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow on focus */
+  box-shadow: 0 0 5px rgb(0, 0, 0); /* Soft shadow on focus */
 }
 
 .results {
