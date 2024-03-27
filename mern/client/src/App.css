@@ -2,13 +2,15 @@
 :root {
   --taille_boite_info : 60px;
   --taille_boite_info2 : 30px; /*Penser a diviser par 2*/
+  background-image:url("fond.png");
+  background-size: cover; 
+  background-position: center; 
 }
 
 /* Style de base pour le corps de l'application */
 .App {
-  text-align: center; /* Alignement du contenu au centre */
-  background-image:url("fond.png");
-  overflow: hidden;
+  text-align: center; 
+ 
 }
 
 /* Styles pour l'en-tête */
