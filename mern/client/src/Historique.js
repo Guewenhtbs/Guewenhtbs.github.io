@@ -5,7 +5,6 @@ function Historique() {
   // État pour stocker les données du tableau
   const [label, setLabel] = useState([
     "Nom", "Sexe", "Animal de compagnie", "MBTI", "Siècle", "Nationalité", "Domaine", "Formation", "Récompense", "Funfacts"
-
   ]);
 
   const [data, setData] = useState([]);
