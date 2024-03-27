@@ -1,33 +1,35 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './Historique.css';
-import 'whatwg-fetch';
 
 function Historique() {
-  // État pour stocker les données du tableau
   const [label, setLabel] = useState([
-    "Nom", "Sexe", "Animal de compagnie", "MBTI", "Siècle", "Nationalité", "Domaine", "Formation", "Récompense", "Funfacts"
+    "Nom", "sexe", "animal de compagnie", "MBTI", "siècle", "nationalité", "domaine", "formation", "récompense"
   ]);
-
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // Fonction pour récupérer les données depuis l'API
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/historique');
-        if (!response.ok) {
-          throw new Error('Erreur réseau');
+        const response = await axios.get('/api/historique');
+        const newData = response.data;
+
+        // Vérifier si les nouvelles données existent déjà dans le tableau
+        if (!data.some(row => JSON.stringify(row) === JSON.stringify(newData))) {
+          // Si les nouvelles données ne sont pas déjà présentes, les ajouter au tableau
+          setData(prevData => [...prevData, newData]);
         }
-        const responseData = await response.json();
-        setData([responseData]); // Mettre les données dans l'état 'data'
       } catch (error) {
         console.error('Erreur lors de la récupération des données depuis l\'API:', error);
       }
     };
 
-    // Appeler la fonction pour récupérer les données une fois le composant monté
-    fetchData();
-  }, []); // L'effet ne dépend pas des valeurs, donc il est exécuté une seule fois après le montage
+    // Rafraîchir les données toutes les 5 secondes
+    const intervalId = setInterval(fetchData, 5000);
+
+    // Nettoyer l'intervalle lorsque le composant est démonté
+    return () => clearInterval(intervalId);
+  }, [data]); // Déclencher l'effet à chaque fois que les données changent
 
   return (
     <div className="Historique">
@@ -40,10 +42,10 @@ function Historique() {
           </tr>
         </thead>
         <tbody>
-          {data.map((row, rowIndex) => (
+          {data.map((rowData, rowIndex) => (
             <tr key={rowIndex}>
-              {Object.values(row).map((cell, cellIndex) => (
-                <td key={cellIndex}>{cell}</td>
+              {label.map((columnName, colIndex) => (
+                <td key={colIndex}>{rowData[columnName]}</td>
               ))}
             </tr>
           ))}
