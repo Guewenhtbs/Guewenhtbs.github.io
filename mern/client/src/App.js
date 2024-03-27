@@ -4,6 +4,7 @@ import './App.css';
 import SearchBar from './searchbar';
 import Historique from './Historique';
 import { requeteClient } from './Requete';
+import CoolButton from './boutons';
 
 function App() {
 
@@ -114,11 +115,10 @@ function App() {
         </div>
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center"}}>
-      <coolbutton onClick={() => {requeteClient("newgame");}}>Nouvelle partie</coolbutton>
-
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop:20}}>
+      <CoolButton className="coolbutton" name="Nouvelle partie" onClick={() => {requeteClient("newgame");}} />
       <SearchBar />
-      <coolbutton onClick={() => {requeteClient("abandon");}}>Langue au chat</coolbutton>
+      <CoolButton className="coolbutton" onClick={() => {requeteClient("abandon");}} name="Langue au chat"/>
       </div>
       <Historique />
     </div>
