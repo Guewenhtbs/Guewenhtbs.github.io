@@ -38,13 +38,13 @@
 }
 
 .Tableau tr:nth-child(even) {
-  background-color: #7f96b9f0;
+  background-color: #8fb0e0f0;
 }
 
 .Tableau tr:nth-child(odd) {
-  background-color: #9f96b9ea;
+  background-color: #7a8dabf0;
 }
 
 .Tableau tr:hover {
-  background-color: #cbdbc8de;
+  background-color: #9fa7cff2;
 }
