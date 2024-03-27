@@ -1,4 +1,8 @@
 /* App.css */
+:root {
+  --taille_boite_info : 60px;
+  --taille_boite_info2 : 30px; /*Penser a diviser par 2*/
+}
 
 /* Style de base pour le corps de l'application */
 .App {
@@ -26,12 +30,14 @@
   font-family: 'Italico';
   font-size: 20;
   letter-spacing: 10px;
-  width: 1000px; /* Largeur de l'encart */
-  height: 400px; /* Hauteur de l'encart */
+  width: 900px; /* Largeur de l'encart */
+  height: 500px; /* Hauteur de l'encart */
   background-color: #abcdef; /* Couleur de fond de l'encart */
   margin: 20px auto; /* Marge autour de l'encart */
   border-radius: 10px; /* Bords arrondis */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre portée */
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -49,12 +55,61 @@
   right: 10%;
   background-color: aquamarine;
   width: 100px; /* Largeur de l'encart */
-  height: 40px; /* Hauteur de l'encart */
+  height: 40px;
 }
 
 .infocontainer {
   display: grid;
   grid-gap: 10px;
+  float: left;
+  height:400px;
+  width:670;
+}
+
+.funfact_container{
+  height:100px;
+  width:900px;
+  display: flex;
+  float:bottom;
+  justify-content: center;
+  align-items: center;
+}
+
+.funfact_mosaic {
+  width: 850px;
+  height: 80px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0,0,0);
+  filter: blur(5px);
+  user-select: none;
+  margin-bottom: 15px;
+}
+
+.funfact_supp_mosaic {
+  width: 850;
+  height: 80px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  letter-spacing : -0.5px;
+  color : rgb(0,0,0);
+  word-wrap: break-word;
+  margin-bottom: 15px;
+}
+
+.name_photo_container {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:400px;
+  width:170px;
+  flex-direction: column;
+  margin-left :30px;
+  margin-right :30px;
 }
 
 .line {
@@ -65,19 +120,22 @@
 }
 
 .bloc {
-  width: 120px;
-  height: 60px;
+  width: 90px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: medium;
   letter-spacing : -0.5px;
   color: rgb(0, 0, 0);
+  background-color: crimson;
+  font-weight: bold;
+  border-radius: 10px;
 }
 
 .mosaic {
   width: 120px;
-  height: 60px; 
+  height: var(--taille_boite_info) ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +145,7 @@
 
 .supp_mosaic {
   width: 120px;
-  height: 60px; 
+  height: var(--taille_boite_info) ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,3 +154,61 @@
   color : rgb(0,0,0);
   word-wrap: break-word;
 }
+
+.mosaic2 {
+  width: 120px;
+  height: var(--taille_boite_info2) ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0,0,0);
+  filter: blur(5px);
+}
+
+.supp_mosaic2 {
+  width: 120px;
+  height: var(--taille_boite_info2) ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: medium;
+  letter-spacing : -0.5px;
+  color : rgb(0,0,0);
+  word-wrap: break-word;
+}
+
+.photo_container {
+  width: 170px; /* largeur fixe du conteneur */
+  height: 200px; /* hauteur fixe du conteneur */
+  overflow: hidden; /* cache le débordement de l'image */
+  border-radius: 10px;
+}
+
+.photo_container img {
+  width: 100%; /* assure que l'image occupe toute la largeur du conteneur */
+  height: 100%; /* assure que l'image occupe toute la hauteur du conteneur */
+  object-fit: cover; /* ajuste la taille de l'image pour couvrir tout le conteneur */
+}
+
+.coolbutton {
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2); 
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  border-radius: 10px; 
+  padding: 8px;
+  margin: 0 5px; 
+  transition: box-shadow 0.3s; 
+}
+
+.coolbutton:hover {
+  background-color: #f0f0f0; 
+  cursor: pointer;
+}
+
+.coolbutton:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+}
+
+

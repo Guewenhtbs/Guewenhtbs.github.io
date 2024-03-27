@@ -1,26 +1,59 @@
+.container {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
 .bar {
-    width: 150px;
-  }
-  
+  width: 300px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  border-radius: 10px; /* Rounder input */
+  padding: 8px;
+  transition: box-shadow 0.3s; /* Smooth transition for focus */
+}
+
+.bar::placeholder {
+  color: #999; /* Placeholder color */
+}
+
+.bar:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow on focus */
+}
+
 .results {
-  flex-wrap: wrap;
-  width: 175px;
-  max-height: 150px;
-  overflow: hidden; 
+  position: absolute;
+  top: calc(100% + 5px); /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 200px;
+  overflow: hidden;
   overflow-y: scroll;
   text-align: center;
+  width: 300px;
+  backdrop-filter: blur(5px); /* Apply blur effect to the background */
+  background-color: rgba(255, 255, 255, 0.2); /* Set a semi-transparent background color */
+  border-radius: 10px; /* Set desired border radius  */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
 }
+
+
+
 .result-item {
-  width: 150px;
-  height: 50px;
-  background-color: lightblue;
-  border: 1px solid blue;
-  margin: 3px;
-  display: flex;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.0);
+  min-height: 40px;
+  max-height: 40px;
+  border: none;
+  display: block;
   justify-content: center;
   align-items: center;
   transition: background-color 0.3s;
 }
+
 .result-item:hover {
-  background-color: lightgreen;
+  background-color: rgba(255, 255, 255, 0.6);
 }
