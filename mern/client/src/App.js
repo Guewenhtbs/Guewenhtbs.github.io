@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './logo.svg';
 import './App.css';
 import SearchBar from './searchbar';
 import Historique from './Historique';
@@ -28,6 +27,11 @@ function App() {
     "Image" : 'https://media.gqmagazine.fr/photos/5cdade1acbf34364716160e4/16:9/w_1280,c_limit/shaveballs.jpg',
     "Link" : 'https://media.gqmagazine.fr/photos/5cdade1acbf34364716160e4/16:9/w_1280,c_limit/shaveballs.jpg'
   })
+
+  const [popupVisible, setPopupVisible] = useState(false);
+  const togglePopup = () => {
+    setPopupVisible(!popupVisible);
+  };
 
   function Set_bloc(text){
     if (text){
@@ -119,6 +123,9 @@ function App() {
         <div className="funfact_container">
           {Set_funfact(info_person["Funfact"])}
         </div>
+      </div>
+      <div className="AboutUs"  onClick={togglePopup}>⭐</div>
+      <div className={popupVisible ? "popup-rectangle" : ""}>
       </div>
 
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop:20}}>

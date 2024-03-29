@@ -10,7 +10,6 @@
 /* Style de base pour le corps de l'application */
 .App {
   text-align: center; 
- 
 }
 
 /* Styles pour l'en-tête */
@@ -203,4 +202,48 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
 }
 
+/* Style pour le bouton ABOUT US*/
+.AboutUs {
+  position: absolute; /* Position absolue par rapport à l'élément parent */
+  top: 21px; /* Ajustement de la position verticale */
+  left: 19px; /* Ajustement de la position horizontale */
+  width: 40px; /* Largeur du carré */
+  height: 40px; /* Hauteur du carré */
+  background-color: rgb(255, 255, 255); /* Couleur de fond du carré */
+  font-size: 30px; /* Taille de la police du signe plus */
+  display: flex; /* Utilisation de flexbox pour centrer le signe plus */
+  align-items: center; /* Centrage vertical */
+  border-radius: 5px; /* Bords arrondis */
+}
 
+/* Style pour le bloc d'info À propos de nous */
+.popup-rectangle::before {
+  content: "ABOUT US 📣\A\A";
+  white-space: pre-line;
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.popup-rectangle::after {
+  content: "C'est un projet du WEB.\A\A Les membres de notre équipe:\A Maxime🙋🏻  Guewen🙋🏻\A Allisson🙋🏻‍♀️  Eloïne🙋🏻‍♀️  Xuan🙋🏻‍♀️\A\A ❤Merci à SFR et VRE pour les soutiens!❤";
+  white-space: pre-line;
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 22px; 
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.popup-rectangle {
+  position: absolute;
+  top: 25%; /* Place le rectangle au centre de la page */
+  left: 35%; /* Place le rectangle au centre de la page */
+  transform: translate(-50%, -50%); /* Centre le rectangle horizontalement et verticalement */
+  width: 850px; /* Définit la largeur du rectangle */
+  height: 300px; /* Définit la hauteur du rectangle */
+  background-color: #726c95f1; /* Couleur de fond du rectangle */
+  border-radius: 10px; /* Bords arrondis */
+  box-shadow: 0 4px 8px rgba(66, 40, 107, 0.688); /* Ajoute l'effet d'ombre de fond */
+  border: 0.7px solid #262626; /* Ajoute l'effet de contour */
+}
