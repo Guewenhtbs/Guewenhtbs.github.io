@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import SearchBar from './searchbar';
 import Historique from './Historique';
+import Statistique from './Statistique';
 import Pubpopup from './Popup';
 import { requeteClient } from './Requete';
 import CoolButton from './boutons';
@@ -134,8 +135,8 @@ function App() {
       <CoolButton className="coolbutton" onClick={() => {requeteClient("abandon");}} name="Langue au chat"/>
       </div>
       <Historique />
-      {/* Affichage stats */}
-    </div>
+      <Statistique />
+      </div>
     {Pubpopup(pub_info,pub_open,setpub_open)}
   </div>
   );
