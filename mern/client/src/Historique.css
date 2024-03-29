@@ -1,21 +1,22 @@
 .Historique {
   text-align: center;
-  font-family: Arial, sans-serif;
-  margin: 20px auto; /* Center the container horizontally and provide top and bottom margin */
-  max-width: 800px; /* Limite la largeur maximale du contenu */
+  font-family: "Comic Sans MS", sans-serif;
+  margin: 20 auto; /* Center the container horizontally and provide top and bottom margin */
+  max-width: 950px; /* Limite la largeur maximale du contenu */
   max-height: 350px; /* Adjust max-height to provide sufficient space for the table and margin */
   z-index: 0;
   border-radius: 10px;
 }
 
 .Tableau {
-  width: fit-content; /* Le tableau occupera la largeur nécessaire */
+  width: 950px; /* Le tableau occupera la largeur nécessaire */
   border-collapse: collapse;
-  margin: 0 auto; /* Center the table horizontally */
+  margin: 20px auto; /* Center the table horizontally */
   overflow-y: auto;
   display: block; /* Garde la disposition en bloc pour la barre de défilement */
   text-align: center; /* Centre le contenu horizontalement */
   border-radius: 10px;
+  letter-spacing: 2.5px;
 }
 
 
@@ -24,7 +25,7 @@
   text-align: center;
   padding: 8px;
   height: 50px;
-  width:100px ;
+  width: 5px;
 }
 
 .Tableau th {
@@ -33,7 +34,6 @@
 
 .Header {
   position: sticky;
-  top: 0;
   background-color: white;
 }
 
