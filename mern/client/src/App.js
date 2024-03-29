@@ -127,6 +127,7 @@ function App() {
       <CoolButton className="coolbutton" onClick={() => {requeteClient("abandon");}} name="Langue au chat"/>
       </div>
       <Historique />
+      {/* Affichage stats */}
     </div>
     {Pubpopup(pub_info,pub_open,setpub_open)}
   </div>
