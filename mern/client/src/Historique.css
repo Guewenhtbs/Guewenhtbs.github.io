@@ -32,8 +32,9 @@
 }
 
 .Header {
-  position: sticky;
-  top: 0;
+  position: absolute;
+  top: 400px;
+  left: 200px;
   background-color: white;
 }
 
