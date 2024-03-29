@@ -40,14 +40,14 @@ function App() {
         let element = text.split('/');
         if (element[1]) {
           return <div>
-            <div className='supp_mosaic'>{element[0]}</div>
-            <div className='supp_mosaic'>{element[1]}</div>
+            <div className='supp_mosaic2'>{element[0]}</div>
+            <div className='supp_mosaic2'>{element[1]}</div>
           </div>
         }
         else {
           return <div>
-            <div className='supp_mosaic'>{element[0]}</div>
-            <div className='mosaic'>ᒲᔑ╎リᓵ⍑ᔑ∷ᔑᓵℸ</div>
+            <div className='supp_mosaic2'>{element[0]}</div>
+            <div className='mosaic2'>ᒲᔑ╎ᓵℸ</div>
           </div>
         }
       }
@@ -57,7 +57,7 @@ function App() {
       
     }
     else {
-      return <div className='mosaic'>ᒲᔑ╎リᓵ⍑ᔑ∷ᔑᓵℸ</div>
+      return <div className='mosaic'>ᒲᔑ╎リᓵ</div>
     }
     
   }
@@ -76,7 +76,7 @@ function App() {
       return <div className='funfact_supp_mosaic'>{text}</div>
     }
     else {
-      return <div className='funfact_mosaic'>⍑ᒷꖎꖎ𝙹ᒲ||リᔑᒲᒷ╎ᓭ∴╎リ↸∴⍑ᒷᒷꖎᔑリ↸i∴ᔑリℸℸ𝙹ᓭℸ𝙹!¡ꖎ╎ᓭℸᒷリℸ𝙹||𝙹⚍ᒲ||リᔑᒲᒷ╎ᓭ∴╎リ↸∴⍑ᒷᒷᔑリℸℸ𝙹ᓭℸ𝙹!¡ꖎ╎ᓭℸᒷリ∴⍑ᒷᒷꖎᔑリ↸i∴ᔑリℸℸ𝙹ᓭℸ𝙹!¡ꖎ╎ᓭℸᒷリℸ𝙹||𝙹⚍∴╎</div>
+      return <div className='funfact_mosaic'>⍑ᒷꖎꖎ𝙹ᒲ||リᔑᒲᒷ╎ᓭ∴╎リ↸∴⍑ᒷᒷꖎᔑリ↸ꖎᔑリ↸i∴ᔑリℸℸᒷリℸ𝙹||𝙹⚍ᒲ||リᔑᒲᒷ╎ᓭ∴╎リ↸∴⍑ᒷᒷᔑリℸℸ𝙹ᓭℸ𝙹!¡ꖎ╎ᓭℸᒷリ∴⍑ᒷᒷꖎᔑリ↸i∴ᔑリℸℸ𝙹ᓭℸ𝙹!¡ꖎ╎ᓭℸᒷリℸ𝙹||𝙹⚍∴╎</div>
     }
   }
 
@@ -89,7 +89,7 @@ function App() {
         <div display='flex'>
           <div className="name_photo_container">
             {Set_image(info_person["Photo"])}
-            <div className="bloc">Nom/Prénom</div>
+            <div className="bloc" style={{marginBottom:10}}>Nom/Prénom</div>
             {Set_bloc(info_person["Nom"])}
           </div>
           <div className="infocontainer">
@@ -114,7 +114,7 @@ function App() {
               <div className="bloc">Domaine</div>
             </div>
 
-            <div className="line">
+            <div className="line" style={{paddingBottom:25}}>
               {Set_bloc(info_person["Formation"])}
               {Set_bloc(info_person["Nationalité"])}
               {Set_bloc(info_person["Récompense"])}
