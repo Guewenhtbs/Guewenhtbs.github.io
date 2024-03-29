@@ -222,16 +222,16 @@
   white-space: pre-line;
   display: block;
   font-family: Arial, sans-serif;
-  font-size: 35px;
+  font-size: 32px;
   color: rgba(255, 255, 255, 0.95);
 }
 
 .popup-rectangle::after {
-  content: "C'est un projet du WEB.\A\A Les membres de notre équipe:\A Maxime🙋🏻 Guewen🙋🏻\A Allisson🙋🏻‍♀️ Eloïne🙋🏻‍♀️ Xuan🙋🏻‍♀️"; /* 使用伪元素的 content 属性来添加文本内容 */
+  content: "C'est un projet du WEB.\A\A Les membres de notre équipe:\A Maxime🙋🏻  Guewen🙋🏻\A Allisson🙋🏻‍♀️  Eloïne🙋🏻‍♀️  Xuan🙋🏻‍♀️\A\A ❤Merci à SFR et VRE pour les soutiens!❤";
   white-space: pre-line;
   display: block;
   font-family: Arial, sans-serif;
-  font-size: 25px; 
+  font-size: 22px; 
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -240,10 +240,10 @@
   top: 25%; /* Place le rectangle au centre de la page */
   left: 35%; /* Place le rectangle au centre de la page */
   transform: translate(-50%, -50%); /* Centre le rectangle horizontalement et verticalement */
-  width: 800px; /* Définit la largeur du rectangle */
+  width: 850px; /* Définit la largeur du rectangle */
   height: 300px; /* Définit la hauteur du rectangle */
   background-color: #726c95f1; /* Couleur de fond du rectangle */
   border-radius: 10px; /* Bords arrondis */
   box-shadow: 0 4px 8px rgba(66, 40, 107, 0.688); /* Ajoute l'effet d'ombre de fond */
-  border: 0.5px solid #262626; /* Ajoute l'effet de contour */
+  border: 0.7px solid #262626; /* Ajoute l'effet de contour */
 }
