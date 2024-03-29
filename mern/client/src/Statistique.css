@@ -1,12 +1,12 @@
 .Statistique {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Deux colonnes côte à côte */
-    gap: 20px; /* Espace entre les tableaux */
+    gap: 10%; /* Espace entre les tableaux */
   }
   
   .Tableau {
-    border: 1px solid #ccc;
-    padding: 20px;
+    border: 1% solid #ccc;
+    padding: 5%;
   }
   
 
@@ -17,8 +17,8 @@
   }
   
   th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1% solid #ddd;
+    padding: 5%;
     text-align: left;
   }
   

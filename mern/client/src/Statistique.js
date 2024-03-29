@@ -31,7 +31,7 @@ function Statistique() {
                 <thead className="Header">
                     <tr>
                         <th>Personnages les plus rapidement trouvés</th>
-                        <th>Nombre d'essai en moyenne</th>
+                        <th>Nombre d'essais en moyenne</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -53,7 +53,7 @@ function Statistique() {
                 <thead className="Header">
                     <tr>
                         <th>Personnages les moins rapidement trouvés</th>
-                        <th>Nombre d'essai en moyenne</th>
+                        <th>Nombre d'essais en moyenne</th>
                     </tr>
                 </thead>
                 <tbody>
