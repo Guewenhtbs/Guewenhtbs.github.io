@@ -1,22 +1,44 @@
 .Statistique {
     display: grid;
-    grid-template-columns: repeat(2,300px); /* Deux colonnes côte à côte */
-    gap: 100px; /* Espace entre les tableaux */
+    grid-template-columns: repeat(2,400px); /* Deux colonnes côte à côte */
+    gap: 120px; /* Espace entre les tableaux */
     align-items: center;
   }
   
   .Statistique > .Tableau {
-    padding: 5%;
+    border-collapse: collapse;
+    margin: 20px auto; /* Center the table horizontally */
+    display: block; /* Garde la disposition en bloc pour la barre de défilement */
+    text-align: center; /* Centre le contenu horizontalement */
+    border-radius: 10px;
+    letter-spacing: 2.5px;
+  }
+  
+  .Statistique > .Header {
+    background-color: white;
   }
   
   
-  .Statistique > .th, .td {
-    border: 1% solid #ddd;
+  .Statistique > .Tableau th, .Tableau td {
+    border: 1px solid #5c5959cd;
     padding: 5%;
     text-align: center;
+    height: 50px;
+    width: 150px;
   }
   
-  .Statistique > .th {
-    background-color: #f2f2f2;
+  .Statistique > .Tableau th {
+    background-color: #ffffffd5;
   }
   
+  .Statistique > .Tableau tr:nth-child(even) {
+    background-color: #8fb0e0f0;
+  }
+  
+  .Statistique > .Tableau tr:nth-child(odd) {
+    background-color: #7a8dabf0;
+  }
+  
+  .Statistique > .Tableau tr:hover {
+    background-color: #9fa7cff2;
+  }
