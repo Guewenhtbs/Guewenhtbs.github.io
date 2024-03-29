@@ -237,8 +237,8 @@
 
 .popup-rectangle {
   position: absolute;
-  top: 25%; /* Place le rectangle au centre de la page */
-  left: 35%; /* Place le rectangle au centre de la page */
+  top: 35%; /* Place le rectangle au centre de la page */
+  left: 45%; /* Place le rectangle au centre de la page */
   transform: translate(-50%, -50%); /* Centre le rectangle horizontalement et verticalement */
   width: 850px; /* Définit la largeur du rectangle */
   height: 300px; /* Définit la hauteur du rectangle */
