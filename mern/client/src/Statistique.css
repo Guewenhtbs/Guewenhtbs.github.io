@@ -1,28 +1,22 @@
 .Statistique {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Deux colonnes côte à côte */
-    gap: 10%; /* Espace entre les tableaux */
+    grid-template-columns: repeat(2,300px); /* Deux colonnes côte à côte */
+    gap: 100px; /* Espace entre les tableaux */
+    align-items: center;
   }
   
-  .Tableau {
-    border: 1% solid #ccc;
+  .Statistique > .Tableau {
     padding: 5%;
   }
   
-
   
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  th, td {
+  .Statistique > .th, .td {
     border: 1% solid #ddd;
     padding: 5%;
-    text-align: left;
+    text-align: center;
   }
   
-  th {
+  .Statistique > .th {
     background-color: #f2f2f2;
   }
   

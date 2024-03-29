@@ -22,13 +22,13 @@
 /* Styles pour le texte "Télécomdle" dans l'en-tête */
 .App-header h1 {
   margin: 0; /* Supprime les marges par défaut */
-  font-family: Arial, sans-serif; /* Police de caractères */
+  font-family: "Kristen ITC", sans-serif; /* Police de caractères */
   font-size: 36px; /* Taille de la police */
 }
 
 /* Styles pour l'encart */
 .Box_info {
-  font-family: 'Italico';
+  font-family: 'Comic Sans MS', sans-serif;
   font-size: 20;
   letter-spacing: 10px;
   width: 900px; /* Largeur de l'encart */
@@ -186,6 +186,7 @@
   outline: none;
   background-color: rgba(180, 200, 203, 0.771); 
   font-size: 16px;
+  font-family: "Comic Sans MS", sans-serif;
   color: rgb(0, 0, 0);
   border-radius: 10px; 
   padding: 8px;
@@ -221,7 +222,7 @@
   content: "ABOUT US 📣\A\A";
   white-space: pre-line;
   display: block;
-  font-family: Arial, sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
   font-size: 32px;
   color: rgba(255, 255, 255, 0.95);
 }
@@ -230,7 +231,7 @@
   content: "C'est un projet du WEB.\A\A Les membres de notre équipe:\A Maxime🙋🏻  Guewen🙋🏻\A Allisson🙋🏻‍♀️  Eloïne🙋🏻‍♀️  Xuan🙋🏻‍♀️\A\A ❤Merci à SFR et VRE pour les soutiens!❤";
   white-space: pre-line;
   display: block;
-  font-family: Arial, sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
   font-size: 22px; 
   color: rgba(255, 255, 255, 0.8);
 }
@@ -241,7 +242,7 @@
   left: 45%; /* Place le rectangle au centre de la page */
   transform: translate(-50%, -50%); /* Centre le rectangle horizontalement et verticalement */
   width: 850px; /* Définit la largeur du rectangle */
-  height: 300px; /* Définit la hauteur du rectangle */
+  height: 330px; /* Définit la hauteur du rectangle */
   background-color: #726c95f1; /* Couleur de fond du rectangle */
   border-radius: 10px; /* Bords arrondis */
   box-shadow: 0 4px 8px rgba(66, 40, 107, 0.688); /* Ajoute l'effet d'ombre de fond */
