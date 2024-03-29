@@ -107,7 +107,41 @@ return (
         {Set_bloc(info_person["MBTI"])}
         {Set_bloc(info_person["Animal"])}
       </div>
+return (
+  <div className="App">
+    <div className="App-header">
+      <h1>Télécomdle</h1>
+    </div>
 
+    <div className="Box_info">
+  <div display='flex'>
+    <div className="name_photo_container">
+      {Set_image(info_person["Photo"])}
+      <div className="bloc">Nom/Prénom</div>
+      {Set_bloc(info_person["Nom"])}
+    </div>
+
+    <div className="infocontainer">
+      <div className="line">
+        <div className="bloc">Genre</div>
+        <div className="bloc">Siècle</div>
+        <div className="bloc">MBTI</div>
+        <div className="bloc">Animal de compagnie</div>
+      </div>
+
+      <div className="line"> 
+        {Set_bloc(info_person["Genre"])}
+        {Set_bloc(info_person["Siècle"])}
+        {Set_bloc(info_person["MBTI"])}
+        {Set_bloc(info_person["Animal"])}
+      </div>
+
+      <div className="line">
+        <div className="bloc">Formation</div>
+        <div className="bloc">Nationalité</div>
+        <div className="bloc">Récompense</div>
+        <div className="bloc">Domaine</div>
+      </div>
       <div className="line">
         <div className="bloc">Formation</div>
         <div className="bloc">Nationalité</div>
@@ -133,6 +167,7 @@ return (
       </div>
 
     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop:20}}>
+    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop:20}}>
       <CoolButton className="coolbutton" name="Nouvelle partie" onClick={() => {requeteClient("newgame");}} />
       <SearchBar />
       <CoolButton className="coolbutton" onClick={() => {requeteClient("abandon");}} name="Langue au chat"/>
@@ -140,8 +175,14 @@ return (
     
     <Historique />
     
+    </div>
+    
+    <Historique />
+    
     {Pubpopup(pub_info,pub_open,setpub_open)}
   </div>
+);
+
 );
 
 }
