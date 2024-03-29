@@ -1,29 +1,31 @@
-import React, { useState } from 'react';
-import './searchbar.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './searchbar.css'; // Import du fichier CSS
 import { requeteClient } from './Requete.js';
 
 function SearchBar() {
   // Données de test
-  const [listProf, setlistProf] = useState([
-    "Albert Einstein",
-    "Pierre", 
-    "Remi",
-    "Lise Meitner",
-    "Adam",
-    "Emma",
-    "Ines",
-    "Titouan",
-    "a",
-    "a",
-    "a",
-    "a",
-    "a",
-    "a",
-    "a",
-    "a"
-  ]);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [noms, setNoms] = useState([]); // Stocker les noms récupérés depuis l'API
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('/api/noms');
+        const newData = response.data;
+        setNoms(newData); // Stocker les noms récupérés dans l'état
+      } catch (error) {
+        console.error('Erreur lors de la récupération des données depuis l\'API:', error);
+      }
+    };
+
+    // Rafraîchir les données toutes les 5 secondes ou lorsque les noms changent
+    const intervalId = setInterval(fetchData, 5000);
+
+    // Nettoyer l'intervalle lorsque le composant est démonté
+    return () => clearInterval(intervalId);
+  }, [noms]); // Déclencher l'effet lorsque les noms changent
 
   // Fonction pour mettre à jour les résultats de recherche
   const handleSearch = (query) => {
@@ -33,42 +35,38 @@ function SearchBar() {
       setSearchResults([]);
     }
     else {
-      // Simuler la recherche en filtrant une liste de résultats
-      const filteredResults = listProf.filter(item =>
+      // Filtrer les résultats en fonction de la recherche
+      const filteredResults = noms.filter(item =>
         item.toLowerCase().includes(query.toLowerCase())
       );
       setSearchResults(filteredResults);
     }
   };
-  
 
   function handleClick(text) {
     requeteClient(text);
     setSearchQuery('');
     setSearchResults([]);
-    setlistProf(listProf.filter(item => item!== text));
+    setNoms(noms.filter(item => item !== text));
   }
 
   return (
-
     <div className="container">
-    <input 
+      <input 
         className="bar"
         type="text"
         placeholder="Rechercher..."
         value={searchQuery}
         onChange={(e) => handleSearch(e.target.value)}
-    />
+      />
     
-    <div className='results'>
+      <div className='results'>
         {searchResults.map((result, index) => (
-            <button key={index} className='result-item' onClick={() => handleClick(result)}>{result}</button>
+          <button key={index} className='result-item' onClick={() => handleClick(result)}>{result}</button>
         ))}
+      </div>
     </div>
-</div>
   );
-
-};
-
+}
 
 export default SearchBar;
