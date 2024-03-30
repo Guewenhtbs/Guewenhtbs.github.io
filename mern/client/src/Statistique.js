@@ -57,16 +57,16 @@ function Statistique() {
                 </thead>
                 <tbody>
                     
-                        <tr><td>{Stat["meilleur"][0]["nom"]}</td>
-                        <td>{Stat["meilleur"][0]["moyenne"]}</td></tr>
-                        <tr><td>{Stat["meilleur"][1]["nom"]}</td>
-                        <td>{Stat["meilleur"][1]["moyenne"]}</td></tr>
-                        <tr><td>{Stat["meilleur"][2]["nom"]}</td>
-                        <td>{Stat["meilleur"][2]["moyenne"]}</td></tr>
-                        <tr><td>{Stat["meilleur"][3]["nom"]}</td>
-                        <td>{Stat["meilleur"][3]["moyenne"]}</td></tr>
                         <tr><td>{Stat["meilleur"][4]["nom"]}</td>
                         <td>{Stat["meilleur"][4]["moyenne"]}</td></tr>
+                        <tr><td>{Stat["meilleur"][3]["nom"]}</td>
+                        <td>{Stat["meilleur"][3]["moyenne"]}</td></tr>
+                        <tr><td>{Stat["meilleur"][2]["nom"]}</td>
+                        <td>{Stat["meilleur"][2]["moyenne"]}</td></tr>
+                        <tr><td>{Stat["meilleur"][1]["nom"]}</td>
+                        <td>{Stat["meilleur"][1]["moyenne"]}</td></tr>
+                        <tr><td>{Stat["meilleur"][0]["nom"]}</td>
+                        <td>{Stat["meilleur"][0]["moyenne"]}</td></tr>
                     
                 </tbody>
             </div> 
