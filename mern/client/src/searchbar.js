@@ -47,7 +47,7 @@ function SearchBar() {
     requeteClient(text);
     setSearchQuery('');
     setSearchResults([]);
-    setNoms(noms.filter(item => item !== text));
+    // setNoms(noms.filter(item => item !== text));
   }
 
   return (
