@@ -1,49 +1,49 @@
-.Historique {
-  text-align: center;
-  font-family: "Comic Sans MS", sans-serif;
-  margin: 20 auto; /* Center the container horizontally and provide top and bottom margin */
-  max-width: 950px; /* Limite la largeur maximale du contenu */
-  max-height: 350px; /* Adjust max-height to provide sufficient space for the table and margin */
-  border-radius: 10px;
-}
-
-.Historique > .Tableau {
-  width: 950px; /* Le tableau occupera la largeur nécessaire */
+.Historique .Tableau {
+  width: auto; /* Utilisation de la largeur automatique pour s'adapter à la taille du contenu */
   border-collapse: collapse;
-  margin: 20px auto; /* Center the table horizontally */
-  overflow-y: auto;
-  display: block; /* Garde la disposition en bloc pour la barre de défilement */
-  text-align: center; /* Centre le contenu horizontalement */
+  margin: auto; /* Centrer le tableau horizontalement */
+  overflow-x: auto; /* Activation du défilement horizontal si nécessaire */
+  text-align: center;
   border-radius: 10px;
   letter-spacing: 2.5px;
+  max-width: 950px;
+  max-height: calc(3 * 50px + 2px); /* Définit la hauteur maximale du tableau à 3 lignes */
+  overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
+  margin-top: 20px;
+  margin-left: -200px;
 }
 
-
-.Historique > .Tableau th, .Tableau td {
+.Historique .Tableau th, .Historique .Tableau td {
   border: 1px solid #5c5959cd;
-  text-align: center;
+  text-align: center; /* Centrer le contenu du tableau */
   padding: 8px;
-  height: 50px;
-  width: 5px;
+  min-width: 120px; /* Ajuste la largeur minimale des colonnes */
+  height: 50px; /* Ajuste la hauteur minimale des lignes */
+  font-size: 14px; /* Réduit la taille de la police */
 }
 
-.Historique > .Tableau th {
+.Historique .Tableau th {
   background-color: #ffffffd5;
 }
 
-.Historique > .Header {
+.Historique .Header {
   position: sticky;
+  top: 0;
   background-color: white;
 }
 
-.Historique > .Tableau tr:nth-child(even) {
+.Historique .Tableau tr:nth-child(even) {
   background-color: #8fb0e0f0;
 }
 
-.Historique > .Tableau tr:nth-child(odd) {
+.Historique .Tableau tr:nth-child(odd) {
   background-color: #7a8dabf0;
 }
 
-.Historique > .Tableau tr:hover {
+.Historique .Tableau tr:hover {
   background-color: #9fa7cff2;
+}
+
+.Historique .Tableau-container {
+  overflow-x: auto; /* Ajoute une barre de défilement horizontale si nécessaire */
 }
