@@ -92,6 +92,7 @@
   color : rgb(0,0,0);
   word-wrap: break-word;
   margin-bottom: 15px;
+  padding: 10px;
 }
 
 .name_photo_container {

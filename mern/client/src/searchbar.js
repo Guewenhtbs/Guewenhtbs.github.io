@@ -21,7 +21,7 @@ function SearchBar() {
     };
 
     // Rafraîchir les données toutes les 5 secondes ou lorsque les noms changent
-    const intervalId = setInterval(fetchData, 5000);
+    const intervalId = setInterval(fetchData, 200);
 
     // Nettoyer l'intervalle lorsque le composant est démonté
     return () => clearInterval(intervalId);

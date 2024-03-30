@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 import './App.css';
 import SearchBar from './searchbar';
 import Historique from './Historique';
@@ -10,18 +11,17 @@ import CoolButton from './boutons';
 function App() {
 
   const [info_person, setinfo_person] = useState({
-    "Nom" : false,
-    "Photo": false,
-    "Genre" : "M",
-    "Siècle" : "20",
-    "MBTI" : "INTP",
-    "Animal" : false,
-    "Formation" : "Polytechnique",
-    "Récompense" : false,
-    "Nationalité" : "Allemande/",
-    "Domaine" : "Physique"
-
-
+    "Nom": false,
+    "Sexe": false,
+    "Animal": false,
+    "MBTI": false,
+    "Siecle": false,
+    "Nationalite": false,
+    "Domaine": false,
+    "Formation": false,
+    "Recompense": false,
+    "Image": false,   
+    "Funfact": false
   })
   const [pub_open,setpub_open] = useState(true)
   const [pub_info,setpub_info] = useState({
@@ -33,6 +33,29 @@ function App() {
   const togglePopup = () => {
     setPopupVisible(!popupVisible);
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('/api/affichage');
+        const newData = response.data;
+        setinfo_person(newData)
+        // // Vérifier si les nouvelles données existent déjà dans le tableau
+        // if (!data.some(row => JSON.stringify(row) === JSON.stringify(newData))) {
+        //   // Si les nouvelles données ne sont pas déjà présentes, les ajouter au tableau
+        //   setData(prevData => [...prevData, newData]);
+        // }
+      } catch (error) {
+        console.error('Erreur lors de la récupération des données depuis l\'API:', error);
+      }
+    };
+
+    // Rafraîchir les données toutes les 5 secondes
+    const intervalId = setInterval(fetchData, 200);
+
+    // Nettoyer l'intervalle lorsque le composant est démonté
+    return () => clearInterval(intervalId);
+  }, [info_person]); // Déclencher l'effet à chaque fois que les données changent
 
   function Set_bloc(text){
     if (text){
@@ -88,37 +111,37 @@ function App() {
       <div className="Box_info">
         <div display='flex'>
           <div className="name_photo_container">
-            {Set_image(info_person["Photo"])}
+            {Set_image(info_person["Image"])}
             <div className="bloc" style={{marginBottom:10}}>Nom/Prénom</div>
             {Set_bloc(info_person["Nom"])}
           </div>
           <div className="infocontainer">
             <div className="line">
-              <div className="bloc">Genre</div>
-              <div className="bloc">Siècle</div>
-              <div className="bloc">MBTI</div>
+              <div className="bloc">Sexe</div>
+              <div className="bloc">Siecle</div>
+              <div className="bloc">Nationalite</div>
               <div className="bloc">Animal de compagnie</div>
             </div>
     
             <div className="line"> 
-              {Set_bloc(info_person["Genre"])}
-              {Set_bloc(info_person["Siècle"])}
-              {Set_bloc(info_person["MBTI"])}
+              {Set_bloc(info_person["Sexe"])}
+              {Set_bloc(info_person["Siecle"])}
+              {Set_bloc(info_person["Nationalite"])}
               {Set_bloc(info_person["Animal"])}
             </div>
 
             <div className="line">
-              <div className="bloc">Formation</div>
-              <div className="bloc">Nationalité</div>
-              <div className="bloc">Récompense</div>
               <div className="bloc">Domaine</div>
+              <div className="bloc">MBTI</div>
+              <div className="bloc">Formation</div>
+              <div className="bloc">Recompense</div>
             </div>
 
             <div className="line" style={{paddingBottom:25}}>
-              {Set_bloc(info_person["Formation"])}
-              {Set_bloc(info_person["Nationalité"])}
-              {Set_bloc(info_person["Récompense"])}
               {Set_bloc(info_person["Domaine"])}
+              {Set_bloc(info_person["MBTI"])}
+              {Set_bloc(info_person["Formation"])}
+              {Set_bloc(info_person["Recompense"])}
             </div>
         </div>
         <div className="funfact_container">

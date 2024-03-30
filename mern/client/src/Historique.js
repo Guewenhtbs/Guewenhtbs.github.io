@@ -25,7 +25,7 @@ function Historique() {
     };
 
     // Rafraîchir les données toutes les 5 secondes
-    const intervalId = setInterval(fetchData, 1000);
+    const intervalId = setInterval(fetchData, 200);
 
     // Nettoyer l'intervalle lorsque le composant est démonté
     return () => clearInterval(intervalId);
