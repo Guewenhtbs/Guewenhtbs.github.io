@@ -1,29 +1,25 @@
-.Historique {
-  text-align: center;
-  font-family: "Comic Sans MS", sans-serif;
-  margin: 20px auto;
-  max-width: 1050px;
-  border-radius: 10px;
-  overflow: hidden; /* Ajout d'un débordement caché pour gérer la barre de défilement */
-}
-
 .Historique .Tableau {
-  width: 100%; /* Utilisation de la largeur à 100% pour s'adapter à la taille du parent */
+  width: auto; /* Utilisation de la largeur automatique pour s'adapter à la taille du contenu */
   border-collapse: collapse;
-  margin: 20px auto;
+  margin: auto; /* Centrer le tableau horizontalement */
   overflow-x: auto; /* Activation du défilement horizontal si nécessaire */
   text-align: center;
   border-radius: 10px;
   letter-spacing: 2.5px;
+  max-width: 950px;
   max-height: calc(3 * 50px + 2px); /* Définit la hauteur maximale du tableau à 3 lignes */
   overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
+  margin-top: 20px;
+  margin-left: -200px;
 }
 
 .Historique .Tableau th, .Historique .Tableau td {
   border: 1px solid #5c5959cd;
   text-align: center; /* Centrer le contenu du tableau */
   padding: 8px;
-  height: 50px;
+  min-width: 120px; /* Ajuste la largeur minimale des colonnes */
+  height: 50px; /* Ajuste la hauteur minimale des lignes */
+  font-size: 14px; /* Réduit la taille de la police */
 }
 
 .Historique .Tableau th {
@@ -46,4 +42,8 @@
 
 .Historique .Tableau tr:hover {
   background-color: #9fa7cff2;
+}
+
+.Historique .Tableau-container {
+  overflow-x: auto; /* Ajoute une barre de défilement horizontale si nécessaire */
 }

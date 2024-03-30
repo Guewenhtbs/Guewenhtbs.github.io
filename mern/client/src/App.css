@@ -31,7 +31,7 @@
   font-family: 'Comic Sans MS', sans-serif;
   font-size: 20;
   letter-spacing: 10px;
-  width: 1200px; /* Largeur de l'encart */
+  width: 900px; /* Largeur de l'encart */
   height: 500px; /* Hauteur de l'encart */
   background-color: #abcdef; /* Couleur de fond de l'encart */
   margin: 20px auto; /* Marge autour de l'encart */
