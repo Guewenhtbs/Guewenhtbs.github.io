@@ -9,7 +9,7 @@ Notre site se lance avec 3 étapes à exécuter dans l'ordre:
 - lancement du client frontend: installation des dépendances avec "npm install" dans le repertoire du package.json, puis "npm start" pour lancer le client. Connexion avec l'url "http://localhost:3000/".
 
 ## Description
-Notre site est un guesser de personnalités scientifiques ayant largement influencés la recherche grâce à leurs travaux. L'objectif est de trouver une de ces personnalités choisies aléatoirement en écrivant des propositions. Si celle-ci n'est pas la bonne, les caractéristiques communes entre la proposition et la personne à trouver s'affichent (Sexe, siècle, domaine d'étude,...) pour guider les prochains essais. Chaque proposition est affichée dans un historique, et un tableau statistique récapitulant les personalités les plus et les moins difficiles à trouver est présent en bas de la page et s'actualise à chaque nouvelle partie.
+Notre site est un guessr de personnalités scientifiques ayant largement influencés la recherche grâce à leurs travaux. L'objectif est de trouver une de ces personnalités choisies aléatoirement en écrivant des propositions. Si celle-ci n'est pas la bonne, les caractéristiques communes entre la proposition et la personne à trouver s'affichent (Sexe, siècle, domaine d'étude,...) pour guider les prochains essais. Chaque proposition est affichée dans un historique, et un tableau statistique récapitulant les personalités les plus et les moins difficiles à trouver est présent en bas de la page et s'actualise à chaque nouvelle partie.
 
 
 ## Utilisation
