@@ -23,16 +23,20 @@ function App() {
     "Image": false,   
     "Funfact": false
   })
-  const [pub_open,setpub_open] = useState(true)
+  const [pub_open,setpub_open] = useState(false)
   const [pub_info,setpub_info] = useState({
-    "Image" : 'https://media.gqmagazine.fr/photos/5cdade1acbf34364716160e4/16:9/w_1280,c_limit/shaveballs.jpg',
-    "Link" : 'https://media.gqmagazine.fr/photos/5cdade1acbf34364716160e4/16:9/w_1280,c_limit/shaveballs.jpg'
+    "Image" : '',
+    "Link" : ''
   })
 
   const [popupVisible, setPopupVisible] = useState(false);
   const togglePopup = () => {
     setPopupVisible(!popupVisible);
   };
+
+  useEffect(() => {
+    requeteClient("newgame");
+  }, []); 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -57,6 +61,33 @@ function App() {
     return () => clearInterval(intervalId);
   }, [info_person]); // Déclencher l'effet à chaque fois que les données changent
 
+  useEffect(() => {
+    const fetchPubData = async () => {
+      try {
+        const response = await fetch('./pub.json');
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error('Erreur lors de la récupération des données depuis pub.json:', error);
+      }
+    };
+
+    const setRandomPubInfo = async () => {
+      const data = await fetchPubData();
+      if (data && data.length) {
+        const randomIndex = Math.floor(Math.random() * data.length);
+        setpub_info(data[randomIndex]);
+        setpub_open(true);
+      }
+    };
+
+    // Modifier pub_info toutes les 2 minutes
+    const intervalId = setInterval(setRandomPubInfo, 120000);
+
+    // Nettoyer l'intervalle lorsque le composant est démonté
+    return () => clearInterval(intervalId);
+  }, []);
+  
   function Set_bloc(text){
     if (text){
       if (text.includes('/')) {
