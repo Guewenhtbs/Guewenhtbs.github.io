@@ -226,6 +226,10 @@
   border-radius: 5px; /* Bords arrondis */
 }
 
+.AboutUs:hover {
+  cursor: pointer;
+}
+
 /* Style pour le bloc d'info À propos de nous */
 .popup-rectangle::before {
   content: "ABOUT US 📣\A\A";
@@ -237,7 +241,7 @@
 }
 
 .popup-rectangle::after {
-  content: "C'est un projet du WEB.\A\A Les membres de notre équipe:\A Maxime🙋🏻  Guewen🙋🏻\A Allisson🙋🏻‍♀️  Eloïne🙋🏻‍♀️  Xuan🙋🏻‍♀️\A\A ❤Merci à SFR et VRE pour les soutiens!❤";
+  content: "Ceci est un projet WEB de 3TC.\A\A Les membres de notre équipe:\A Maxime🙋🏻  Guewen🙋🏻\A Allisson🙋🏻‍♀️  Eloïne🙋🏻‍♀️  Xuan🙋🏻‍♀️\A\A ❤Merci à SFR et VRE pour les soutiens!❤";
   white-space: pre-line;
   display: block;
   font-family: "Comic Sans MS", sans-serif;
